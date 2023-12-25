@@ -4,6 +4,7 @@ terraform {
 
 module "aws-s3-website" {
   source = "./modules/aws-s3-website"
+  versions = "2.0.3"
 
   # bucket_name = "hyungwook"
 
