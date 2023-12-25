@@ -76,7 +76,7 @@ resource "aws_s3_object" "index" {
   source       = "www/index.html"
   content_type = "text/html"
 
-  etag = filemd5("./www/index.html")
+  etag = filemd5("${path.module}/www/index.html")
 }
 
 resource "aws_s3_object" "error" {
@@ -85,5 +85,5 @@ resource "aws_s3_object" "error" {
   source       = "www/error.html"
   content_type = "text/html"
 
-  etag = filemd5("./www/error.html")
+  etag = filemd5("${path.module}/www/error.html")
 }
